@@ -1,0 +1,44 @@
+.achievement__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    // grid-template-columns: 1fr 1fr 1fr;
+    // gap: 3rem;
+}
+.achievement__article{
+background: var(--color-bg-variant);
+border: 1px solid transparent;
+border-radius: 1rem;
+padding: 2rem 5rem 2rem 5rem;
+text-align: center;
+
+
+&:hover {
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+}
+
+.achievement{
+    &__title{
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    &__description{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    &__level{
+        text-align: left;
+    }
+    &__prize{
+        text-align: left;
+
+        &__link{
+            margin-top: 2rem;
+        }
+    }
+}

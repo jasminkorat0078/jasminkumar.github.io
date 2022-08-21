@@ -1,0 +1,121 @@
+header {
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
+  .header {
+    &__container {
+      text-align: center;
+      height: 100%;
+      position: relative;
+    }
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+
+        &:after{
+            content: "";
+            width: 1px;
+            height: 2rem;
+            background: var(--color-primary);
+        }
+        @media (max-width:600px){
+            display: none;
+        }
+    }
+    
+  }
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.me{
+    background: linear-gradient(var(--color-primary),transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0rem 0rem;
+    overflow: hidden;
+    padding: 8rem 1.5rem 1.5rem;
+    color: var(--color-bg);
+}
+
+.scroll__down{
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+
+}
+
+@media (max-width:1024px){
+    header{
+        height: 85vh;
+    }
+}
+
+@media (max-width:600px){
+    header{
+        height: 100vh;
+    }
+
+    .scroll__down{
+        display: none;
+    }
+    .header__socials{
+        display: none;
+    }
+}
+.char {
+    animation-delay: var(--del);
+    animation-direction: var(--dir, normal);
+    animation-duration: var(--dur);
+    animation-iteration-count: var(--it, infinite);
+    animation-name: var(--name);
+    animation-timing-function: var(--tf);
+    animation-fill-mode: var(--fill, forwards);
+    display: inline-block;
+    position: relative;
+    transform-origin: 50% 100%;
+    z-index: 1;
+  }
+.headline--jump{
+    animation: spin-pyramid 8s ease infinite alternate;
+}
+
+@keyframes spin-pyramid {
+    // 10% {
+    //     transform: rotateX(90deg);
+    //   }
+    //   25% {
+    //     transform: rotateY(90deg) rotateX(90deg);
+    //   }
+    //   50% {
+    //     transform: rotateY(180deg) rotateX(90deg);
+    //   }
+    //   75% {
+    //     transform: rotateY(270deg) rotateX(90deg);
+    //   }
+    //   100% {
+    //     transform: rotateY(360deg) rotateX(90deg);
+    //   }
+    from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(359deg);
+      }
+  }

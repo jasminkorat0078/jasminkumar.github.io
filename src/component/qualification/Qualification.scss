@@ -1,0 +1,42 @@
+.qualification__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+}
+.qualification__article{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-primary-variant);
+      cursor: default;
+    }
+}
+.qualification{
+    &__title{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    &__school{
+        text-align: left;
+        font-size: 0.9rem;
+    }
+    &__marks{
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width:600px){
+    .qualification__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+}
+}
